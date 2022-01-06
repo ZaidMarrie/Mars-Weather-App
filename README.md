@@ -14,8 +14,6 @@
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -28,6 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
+![Mars Weather](https://user-images.githubusercontent.com/84665360/148375014-bfaf27fd-0441-46b4-bb24-8e956e62f782.png)
 
 
 ### Links
