@@ -1,0 +1,33 @@
+{
+  "name": "mars-weather-app",
+  "version": "1.0.0",
+  "description": "A mars weather app build with an API(Insight: ).",
+  "main": "index.html",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZaidMarrie/Mars-Weather-App.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "api"
+  ],
+  "author": "Zaid Marrie <zaidmarrie27@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZaidMarrie/Mars-Weather-App/issues"
+  },
+  "homepage": "https://github.com/ZaidMarrie/Mars-Weather-App#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.46.0"
+  }
+}
