@@ -11,6 +11,12 @@ function scssTask() {
         .pipe(dest('./build/css', { sourcemaps: '.' }));
 }
 
+// Copy JS
+function copyJs() {
+    return src('./src/js/script.js')
+        .pipe(dest('build/js'));
+}
+
 // BrowserSync Tasks
 function browserSyncServe(cb) {
     browsersync.init({
@@ -34,9 +40,9 @@ function browserSyncReload(cb) {
 // Watch task
 function watchTask() {
     watch('*.html', browserSyncReload);
-    watch('./src/js/*.js', browserSyncReload);
+    watch('./src/js/*.js', series(copyJs, browserSyncReload));
     watch('./src/scss/**/*.scss', series(scssTask, browserSyncReload));
 }
 
 // Default Gulp Task
-exports.default = series(scssTask, browserSyncServe, watchTask);
+exports.default = series(scssTask, copyJs, browserSyncServe, watchTask);

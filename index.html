@@ -27,12 +27,12 @@
             <p class="fs-500 text-white-opaque mt-1 mb-0">
                 High: 
                 <span data-current-temp-high>-20</span>
-                °C
+                °<span data-temp-unit>C</span>
             </p>
             <p class="fs-500 text-white-opaque mt-0 mb-0">
                 Low: 
                 <span data-current-temp-low>-98</span>
-                °C
+                °<span data-temp-unit>C</span>
             </p>
         </div>
         <div class="wind flex">
@@ -40,7 +40,7 @@
                 <h2 class="section__title fs-700">Wind</h2>
                 <p class="fs-600 mt-1 mb-0">
                     <span data-wind-speed>75</span> 
-                    kph
+                    <span data-speed-unit>kph</span>
                 </p>
             </div>
             
@@ -58,7 +58,7 @@
             <label for="celsius">&deg;C</label>
             <input type="radio" name="unit" id="celsius" checked>
 
-            <button class="unit__toggle"></button>
+            <button class="unit__toggle" data-unit-toggle></button>
             
             <label for="fahrenheit">&deg;F</label>
             <input type="radio" name="unit" id="fahrenheit">
@@ -74,64 +74,30 @@
 
         <h2 class="text-dark uppercase">Previous 7 days</h2>
 
-        <div class="previous-days flex text-gray">
-            <div class="previous-day">
-                <h2 class="previous-day__sol fs-500">Sol 371</h2>
-                <p class="previous-day__date">September 31</p>
-                <p class="previous-day__temp fs-500">High: -20°C</p>
-                <p class="previous-day__temp fs-500">Low: -98°C</p>
-                <button class="previous-day__more-info text-white bg-dark">more info</button>
-            </div> <!-- /previous-day -->
-
-            <div class="previous-day">
-                <h2 class="previous-day__sol fs-500">Sol 371</h2>
-                <p class="previous-day__date">September 31</p>
-                <p class="previous-day__temp fs-500">High: -20°C</p>
-                <p class="previous-day__temp fs-500">Low: -98°C</p>
-                <button class="previous-day__more-info text-white bg-dark">more info</button>
-            </div> <!-- /previous-day -->
-
-            <div class="previous-day">
-                <h2 class="previous-day__sol fs-500">Sol 371</h2>
-                <p class="previous-day__date">September 31</p>
-                <p class="previous-day__temp fs-500">High: -20°C</p>
-                <p class="previous-day__temp fs-500">Low: -98°C</p>
-                <button class="previous-day__more-info text-white bg-dark">more info</button>
-            </div> <!-- /previous-day -->
-
-            <div class="previous-day">
-                <h2 class="previous-day__sol fs-500">Sol 371</h2>
-                <p class="previous-day__date">September 31</p>
-                <p class="previous-day__temp fs-500">High: -20°C</p>
-                <p class="previous-day__temp fs-500">Low: -98°C</p>
-                <button class="previous-day__more-info text-white bg-dark">more info</button>
-            </div> <!-- /previous-day -->
-
-            <div class="previous-day">
-                <h2 class="previous-day__sol fs-500">Sol 371</h2>
-                <p class="previous-day__date">September 31</p>
-                <p class="previous-day__temp fs-500">High: -20°C</p>
-                <p class="previous-day__temp fs-500">Low: -98°C</p>
-                <button class="previous-day__more-info text-white bg-dark">more info</button>
-            </div> <!-- /previous-day -->
-
-            <div class="previous-day">
-                <h2 class="previous-day__sol fs-500">Sol 371</h2>
-                <p class="previous-day__date">September 31</p>
-                <p class="previous-day__temp fs-500">High: -20°C</p>
-                <p class="previous-day__temp fs-500">Low: -98°C</p>
-                <button class="previous-day__more-info text-white bg-dark">more info</button>
-            </div> <!-- /previous-day -->
-
-            <div class="previous-day">
-                <h2 class="previous-day__sol fs-500">Sol 371</h2>
-                <p class="previous-day__date">September 31</p>
-                <p class="previous-day__temp fs-500">High: -20°C</p>
-                <p class="previous-day__temp fs-500">Low: -98°C</p>
-                <button class="previous-day__more-info text-white bg-dark">more info</button>
-            </div> <!-- /previous-day -->
-
+        <div class="previous-days flex text-gray" data-previous-sols>
         </div> <!-- /previous-days -->
+
+        <template data-previous-sol-template>
+            <div class="previous-day">
+                <h3 class="previous-day__sol fs-500">
+                    Sol 
+                    <span data-sol>371</span>
+                </h3>
+                <p class="previous-day__date" data-date>September 31</p>
+                <p class="previous-day__temp fs-500">
+                    High: 
+                    <span data-temp-high>-20</span>
+                    °<span data-temp-unit>C</span>
+
+                </p>
+                <p class="previous-day__temp fs-500">
+                    Low: 
+                    <span data-temp-low>-98</span>
+                    °<span data-temp-unit>C</span>
+                </p>
+                <button class="previous-day__more-info text-white bg-dark" data-select-button>more info</button>
+            </div> <!-- /previous-day -->
+        </template>
     </div>
 </body>
 </html>
