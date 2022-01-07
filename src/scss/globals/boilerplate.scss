@@ -9,12 +9,28 @@ html {
 }
 
 body {
-    margin: 0;
     font-size: 1rem;
     line-height: 1.6;
+    font-size: var(--fs-400);
+    font-family: var(--ff-sans);
+    color: hsl( var(--clr-white) );
+    margin: 0;
+    height: 100vh;
+    background-color: hsl( var(--clr-bg) );
+    background-size: cover;
+    background-image: url('../../images/background.png');
+    overflow: hidden;
+    // display: grid;
+    padding-top: min(100px, 5vmax);
 }
 
 img {
     display: block;
     max-width: 100%;
+}
+
+a,
+button,
+input {
+    font: inherit;
 }

@@ -1,0 +1,39 @@
+.unit__toggle {
+    cursor: pointer;
+    width: 2.75rem;
+    padding: 2px;
+    border: 2px solid hsl( var(--clr-white) );
+    border-radius: 1rem;
+    background-color: transparent;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 1rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: hsl( var(--clr-white) );
+        transform: translateX(20px);
+        transition: transform 250ms ease-in-out;
+    }
+}
+
+.unit label {
+    cursor: pointer;
+}
+
+.unit input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+input:checked + .unit__toggle::after {
+    transform: translateX(0);
+}
