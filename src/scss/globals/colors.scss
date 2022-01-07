@@ -1,3 +1,8 @@
 :root {
-    --clr-bg: hsl(25, 33%, 50%);
+    --clr-bg: 25, 33%, 50%;
+    --clr-white: 0, 100%, 100%; /* 42% opacity for lighter */
+    --clr-accent-dark: 0, 33%, 29%;
+    --clr-accent-light: 0, 51%, 62%;
+    --clr-dark: 0, 51%, 20%;
+    --clr-gray: 0, 0%, 34%;
 }

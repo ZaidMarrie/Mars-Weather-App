@@ -1,0 +1,37 @@
+// 560px, 832px, 1440px
+$breakpoints: (
+	'medium': '35em',
+	'large': '52em',
+	'xlarge': '90em',
+);
+
+// 559px, 831px, 1439px
+$breakpoints-down: (
+    'small': '34.9375em',
+	'medium': '51.9375em',
+	'large': '89.9375em',
+);
+
+// Media Query with min-width
+@mixin breakpoint($size) {
+	@if map-has-key($breakpoints, $size) {
+        @media (min-width: map-get($breakpoints, $size)) {
+            @content;
+        }
+    }
+    @else {
+        @warn "TypeErr: `#{$size}`. " + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+// Media Query with max-width
+@mixin breakpoint-down($size) {
+	@if map-has-key($breakpoints-down, $size) {
+        @media (max-width: map-get($breakpoints-down, $size)) {
+            @content;
+        }
+    }
+    @else {
+        @warn "TypeErr: `#{$size}`. " + "Available breakpoints are: #{map-keys($breakpoints-down)}.";
+    }
+}
